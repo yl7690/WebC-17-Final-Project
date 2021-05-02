@@ -8,8 +8,62 @@ html, body {
   box-sizing: border-box;
 }
 
+/* Codes for Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  grid-area: menu;
+  font-family: acier-bat-solid, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  width: 250px;
+}
 
+.menu .logo {
+  width: 60px;
+  margin-bottom: 7px;
+}
 
+.pageNames {
+  display: none;
+}
+
+.showMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu h2 {
+  margin: 7px;
+}
+
+.menu a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 /* Codes for Home Page */
 #homePage > .mainContainer {
@@ -49,7 +103,7 @@ html, body {
   margin: 10px;
 }
 
-#homePage .menu {
+#homePage .homeMenu {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -61,42 +115,42 @@ html, body {
   letter-spacing: 1px;
 }
 
-#homePage .logo {
+#homePage .homeMenu .logo {
   width: 60px;
   margin-bottom: 7px;
 }
 
-#homePage h2 {
+#homePage .homeMenu h2 {
   margin: 7px;
 }
 
-#homePage a:nth-child(2) {
+#homePage .homeMenu a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#homePage .homeMenu a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#homePage .homeMenu a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#homePage .homeMenu a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#homePage .homeMenu a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#homePage a:first-child {
   font-family: acier-bat-outline, sans-serif;}
-
-#homePage a:link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-#homePage a:hover {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-#homePage a:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-#homePage a:link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-#homePage a:active {
-  text-decoration: none;
-  color: #ffffff;
-}
 
 #homePage .intro {
   grid-area: intro;
@@ -114,4 +168,106 @@ html, body {
   top: 5%;
   left: 15%;
   animation-timing-function: ease;
+}
+
+
+/* Codes for Law Page */
+#lawPage .bgEyeLayer {
+  position: fixed;
+  background-color: #ff005c;
+  height: 100vh;
+  width: 100%;
+  z-index: -999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lawPage .bgEyeCon {
+  width: 200px;
+  height: 91.13px;
+}
+
+#lawPage .bgEyeShape {
+  width: 200px;
+  position: absolute;
+}
+
+#lawPage .bgEyeShape img {
+  width: 200px;
+  object-fit: contain;
+}
+
+#lawPage .eyeballCon {
+  width: 199px;
+  height: 91.13px;
+  background-color: #ffffff;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+#lawPage .eyeballCon #bgEyeball {
+  /* width: 160px; */
+  height: 91.13px;
+  object-fit: contain;
+  position: absolute;
+}
+
+#lawPage .cover {
+  display: grid;
+  height: 47vw;
+  width: 100%;
+  /* background-color: #ff005c; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#lawPage .menu a:nth-child(2) {
+  font-family: acier-bat-outline, sans-serif;
+}
+
+#lawPage .coverPic {
+  width: 48vw;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+#lawPage .pageTitle {
+  text-align: right;
+  font-family: acier-bat-solid, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.4vw;
+  z-index: +1;
+  margin-right: 10%;
+}
+
+#lawPage .cover h1 {
+  margin: 0px;
+}
+
+#lawPage .cover span {
+  font-family: acier-bat-outline, sans-serif;
+}
+
+#lawPage .menu {
+  position: fixed;
+  right: 10%;
+  top: 5%;
+}
+
+#lawPage .pageTitle p {
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6vw;
+  margin-top: 0px;
+  padding-bottom: 10px;
+}
+
+#lawPage .topic {
+  height: 200px;
+  border: #000 5px solid;
 }

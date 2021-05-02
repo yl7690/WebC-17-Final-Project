@@ -19,7 +19,8 @@ html, body {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
-  width: 250px;
+  width: 290px;
+  z-index: +999;
 }
 
 .menu .logo {
@@ -34,10 +35,33 @@ html, body {
 .showMenu {
   display: flex;
   flex-direction: column;
+  background-color: #0000fe;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .menu h2 {
   margin: 7px;
+  position: relative;
+}
+
+.menu a {
+  position: relative;
+}
+
+.menu a:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  bottom: 0px;
+  right: 8px;
+}
+
+.menu a:last-child:after {
+  content: "";
+  display: none;
 }
 
 .menu a:link {
@@ -113,6 +137,7 @@ html, body {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
+  z-index: +999;
 }
 
 #homePage .homeMenu .logo {
@@ -122,6 +147,25 @@ html, body {
 
 #homePage .homeMenu h2 {
   margin: 7px;
+}
+
+#homePage .homeMenu a {
+  position: relative;
+}
+
+#homePage .homeMenu a:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  /* bottom: 0px; */
+  right: 8px;
+}
+
+#homePage .homeMenu a:last-child:after {
+  content: "";
+  display: none;
 }
 
 #homePage .homeMenu a:link {
@@ -150,7 +194,8 @@ html, body {
 }
 
 #homePage a:first-child {
-  font-family: acier-bat-outline, sans-serif;}
+  font-family: acier-bat-outline, sans-serif;
+}
 
 #homePage .intro {
   grid-area: intro;
@@ -267,7 +312,63 @@ html, body {
   padding-bottom: 10px;
 }
 
-#lawPage .topic {
-  height: 200px;
-  border: #000 5px solid;
+#lawPage .topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lawPage input {
+  display: none;
+}
+
+#lawPage label {
+  display: flex;
+  width: 80%;
+  padding: 1.7vw;
+  border-top: #000 0.5vw solid;
+  position: relative;
+}
+
+#lawPage .close {
+  width: 5%;
+  object-fit: contain;
+}
+
+input:checked + label > .close {
+  display: none;
+}
+
+/* #lawPage label::after {
+  content: url(blueClosedEye.png);
+  position: absolute;
+  transform: scale(0.1);
+  right: -10%;
+  top: 0px;
+} */
+
+#lawPage label h3 {
+  width: 85%;
+  font-family: acier-bat-solid, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5vw;
+}
+
+#lawPage label span {
+  font-family: acier-bat-gris, sans-serif;
+}
+
+#lawPage .data {
+  width: 80%;
+  font-size: 1.2vw;
+  font-family: Saira;
+}
+
+input + label + .data {
+  display: none;
+}
+
+input:checked + label + .data {
+  display: block;
 }

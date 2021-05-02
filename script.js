@@ -3,6 +3,8 @@ var bgEyeball, bgEyeballCon, bgEyeballConW, bgEyeballConH, bgLayer, bgLayerW, bg
 var menuLogo, menu;
 var menuHide = true;
 var menuShow = false;
+var checkbox, openEye, closedEye;
+
 
 // window.addEventListener('DOMContentLoaded', (event) => {
 //
@@ -51,7 +53,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var portion = mouseX / bgLayerW;
     // var spaceUp = (vh - bgEyeballConH) / 2;
 
-    console.log(bgEyeballConW);
+    console.log(spaceLeft);
     console.log("mouse", mouseX);
 
     horiMove = (portion * (bgEyeballConW - 91.13));
@@ -64,6 +66,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+
 window.addEventListener('DOMContentLoaded', (event) => {
 
   menuLogo = document.getElementsByClassName('logo')[0];
@@ -72,6 +75,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
   console.log(menu);
   menuLogo.addEventListener('click', showMenu);
 });
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+});
+
 
 function showMenu() {
     if (menuHide) {

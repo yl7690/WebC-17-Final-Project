@@ -3,7 +3,8 @@ var bgEyeball, bgEyeballCon, bgEyeballConW, bgEyeballConH, bgLayer, bgLayerW, bg
 var menuLogo, menu;
 var menuHide = true;
 var menuShow = false;
-var checkbox, openEye, closedEye;
+var checkbox, displayEye, lawData;
+var showEye, hideEye;
 
 
 // window.addEventListener('DOMContentLoaded', (event) => {
@@ -53,8 +54,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var portion = mouseX / bgLayerW;
     // var spaceUp = (vh - bgEyeballConH) / 2;
 
-    console.log(spaceLeft);
-    console.log("mouse", mouseX);
+    // console.log(spaceLeft);
+    // console.log("mouse", mouseX);
 
     horiMove = (portion * (bgEyeballConW - 91.13));
 
@@ -66,7 +67,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-
 window.addEventListener('DOMContentLoaded', (event) => {
 
   menuLogo = document.getElementsByClassName('logo')[0];
@@ -74,13 +74,99 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   console.log(menu);
   menuLogo.addEventListener('click', showMenu);
+
 });
 
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
+  checkbox1 = document.getElementById('question1');
+  checkbox2 = document.getElementById('question2');
+  checkbox3 = document.getElementById('question3');
+  checkbox4 = document.getElementById('question4');
+  checkbox5 = document.getElementById('question5');
+  checkbox6 = document.getElementById('question6');
+  checkbox7 = document.getElementById('question7');
+  checkbox8 = document.getElementById('question8');
+  checkbox9 = document.getElementById('question9');
+
+  checkboxes = document.getElementsByClassName('questions');
+
+  lawData = document.getElementsByClassName('data');
+
+  for (i=0; i<9; i++) {
+    checkboxes[i].setAttribute('showEye', false);
+    checkboxes[i].setAttribute('hideEye', true);
+    lawData[i].classList.add('hideData');
+  }
+
+  displayEye = document.getElementsByClassName('displayStatus');
+
+  // closedEye = document.getElementsByClassName('close')[0];
+  // openEye = document.getElementsByClassName('open')[0];
+
+
+
+  checkbox1.addEventListener('click', function() {
+    showCompare(0);
+  });
+
+  checkbox2.addEventListener('click', function() {
+    showCompare(1);
+  });
+
+  checkbox3.addEventListener('click', function() {
+    showCompare(2);
+  });
+
+  checkbox4.addEventListener('click', function() {
+    showCompare(3);
+  });
+
+  checkbox5.addEventListener('click', function() {
+    showCompare(4);
+  });
+
+  checkbox6.addEventListener('click', function() {
+    showCompare(5);
+  });
+
+  checkbox7.addEventListener('click', function() {
+    showCompare(6);
+  });
+
+  checkbox8.addEventListener('click', function() {
+    showCompare(7);
+  });
+
+  checkbox9.addEventListener('click', function() {
+    showCompare(8);
+  });
 });
 
+function showCompare(x) {
+
+      if (checkboxes[x].hideEye) {
+        checkboxes[x].showEye = true;
+        checkboxes[x].hideEye = false;
+      } else {
+        checkboxes[x].showEye = false;
+        checkboxes[x].hideEye = true;
+      }
+
+      if (checkboxes[x].showEye) {
+        displayEye[x].src = "blueOpenEye.png";
+        lawData[x].classList.add('showData');
+        // hideEye = true;
+        // showEye = false;
+      } else if (checkboxes[x].hideEye) {
+          displayEye[x].src = "blueClosedEye.png";
+          lawData[x].classList.remove('showData');
+          // hideEye = false;
+          // showEye = true;
+        }
+
+}
 
 function showMenu() {
     if (menuHide) {

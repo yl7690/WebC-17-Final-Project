@@ -318,36 +318,15 @@ html, body {
   align-items: center;
 }
 
-#lawPage input {
-  display: none;
-}
-
-#lawPage label {
+#lawPage .questions {
   display: flex;
+  justify-content: space-around;
   width: 80%;
   padding: 1.7vw;
   border-top: #000 0.5vw solid;
-  position: relative;
 }
 
-#lawPage .close {
-  width: 5%;
-  object-fit: contain;
-}
-
-input:checked + label > .close {
-  display: none;
-}
-
-/* #lawPage label::after {
-  content: url(blueClosedEye.png);
-  position: absolute;
-  transform: scale(0.1);
-  right: -10%;
-  top: 0px;
-} */
-
-#lawPage label h3 {
+#lawPage .questions h3 {
   width: 85%;
   font-family: acier-bat-solid, sans-serif;
   font-weight: 400;
@@ -355,8 +334,13 @@ input:checked + label > .close {
   font-size: 2.5vw;
 }
 
-#lawPage label span {
+#lawPage .questions span {
   font-family: acier-bat-gris, sans-serif;
+}
+
+#lawPage .displayStatus {
+  width: 5%;
+  object-fit: contain;
 }
 
 #lawPage .data {
@@ -365,10 +349,6 @@ input:checked + label > .close {
   font-family: Saira;
 }
 
-input + label + .data {
-  display: none;
-}
+.hideData {display: none;}
 
-input:checked + label + .data {
-  display: block;
-}
+.showData {display: block;}

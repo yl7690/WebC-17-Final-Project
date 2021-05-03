@@ -312,16 +312,38 @@ html, body {
   padding-bottom: 10px;
 }
 
-#lawPage .topics {
+#lawPage .intro {
+  width: 62%;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+}
+
+#lawPage .content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+#lawPage .topics {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lawPage .topics:last-child {
+  border-bottom: #000 0.5vw solid;
+  margin-bottom: 10vw;
+}
+
 #lawPage .questions {
   display: flex;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
   padding: 1.7vw;
   border-top: #000 0.5vw solid;
 }
@@ -347,8 +369,399 @@ html, body {
   width: 80%;
   font-size: 1.2vw;
   font-family: Saira;
+  padding-bottom: 4vw;
 }
 
 .hideData {display: none;}
 
-.showData {display: block;}
+.showData {
+  display: grid;
+  grid-template-columns: 28% 72%;
+  grid-template-rows: repeat(11, 1fr);
+  /* column-gap: 20px; */
+}
+
+#lawPage .data * {
+  border-top: #000 0.2vw solid;
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4vw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#lawPage .data .cate1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-right: 2vw;
+  font-weight: 700;
+}
+
+#lawPage .data .cate2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 700;
+  display: grid;
+  padding: unset;
+  border: unset;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+#lawPage .data .cate2 * {
+  margin-right: 2vw;
+  font-weight: 700;
+  height: 100%;
+}
+
+#lawPage .data .cate2 div:last-child {
+  margin-right: unset;
+}
+
+#lawPage .answers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding: unset;
+}
+
+#lawPage #question4 + .data .cate2 {
+  border-top: #000 0.2vw solid;
+}
+
+#lawPage #question4 + .data .answers {
+  display: flex;
+  padding: 10px;
+}
+
+#lawPage .answers * {
+  border: unset;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2vw;
+  padding: unset;
+  padding-left: 10px;
+}
+
+#lawPage .answers div:last-child {
+  border: unset;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.4vw;
+  padding: unset;
+  padding-left: 10px;
+}
+
+#lawPage .data .brazil {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#lawPage .data .china {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#lawPage .data .finland {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#lawPage .data .germany {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#lawPage .data .italy {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#lawPage .data .japan {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#lawPage .data .malaysia {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+#lawPage .data .peru {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+#lawPage .data .singapore {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+#lawPage .data .us {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  border-bottom: #000 0.2vw solid;
+}
+
+#lawPage .data .brazilAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#lawPage .data .chinaAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#lawPage .data .finlandAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#lawPage .data .germanyAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#lawPage .data .italyAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#lawPage .data .japanAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#lawPage .data .malaysiaAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+#lawPage .data .peruAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+#lawPage .data .singaporeAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+#lawPage .data .usAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  border-bottom: #000 0.2vw solid;
+}
+
+
+
+
+
+/*
+#lawPage .data .cate1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-right: 2vw;
+  font-weight: 700;
+}
+
+#lawPage .data .cate2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 700;
+} */
+
+/* #lawPage .data .brazil {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#lawPage .data .china {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#lawPage .data .finland {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#lawPage .data .germany {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#lawPage .data .italy {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#lawPage .data .japan {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#lawPage .data .malaysia {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+#lawPage .data .peru {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+#lawPage .data .singapore {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+#lawPage .data .us {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  border-bottom: #000 0.2vw solid;
+} */
+
+#lawPage .data .brazilAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#lawPage .data .chinaAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#lawPage .data .finlandAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#lawPage .data .germanyAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#lawPage .data .italyAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#lawPage .data .japanAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#lawPage .data .malaysiaAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+#lawPage .data .peruAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+#lawPage .data .singaporeAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+#lawPage .data .usAnswer{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  border-bottom: #000 0.2vw solid;
+}

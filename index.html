@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
   <body id="homePage">
     <div class="mainContainer">
       <div id="homeTitleBox">
-        <img src="eyeball.png" id="eyeball">
+        <img src="img/blueEyeball.png" id="eyeball">
         <div class="titles">
           <h1>BIG</h1>
           <h1>BROTHER</h1>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="homeMenu">
-        <img src="logo.png" class="logo">
+        <img src="img/logo.png" class="logo">
         <div class="homePageNames">
           <a href="index.html"><h2>HOME</h2></a>
           <a href="laws.html"><h2>GLOBAL SURVEILLANCE LAW COMPARISON</h2></a>
@@ -35,4 +35,69 @@
     <script src="script.js" charset="utf-8"></script>
 
   </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BIG BROTHER'S WATCHING YOU</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="script.js" charset="utf-8"></script> -->
+  <link rel="stylesheet" href="https://use.typekit.net/wyo7amo.css">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body id="homePage">
+  <div class="mainContainer">
+    <div id="homeTitleBox">
+
+      <svg id="vectorEye" viewbox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" fill="black">
+
+        <polygon class="sight" points="0 500 1000 500 2000 2000 0 2000" />
+
+        <clipPath id="lids">
+          <path id="lids-path" stroke-linejoin="round" stroke-linecap="round" d="M 0 500 Q 500 0 1000 500 Q 500 1000 0 500" />
+        </clipPath>
+
+        <g clip-path="url(#lids)">
+          <rect class="whites" width="1000" height="1000" fill="#fff" />
+          <g class="iris-group">
+            <circle class="iris" cx="500" cy="500" r="150" fill="#000" />
+            <circle class="pupil" cx="500" cy="500" r="75" fill="#fff" />
+          </g>
+        </g>
+        <use href="#lids-path" class="lids" stroke="#000" stroke-width="2" />
+      </svg>
+
+      <div class="titles">
+        <h1>BIG</h1>
+        <h1>BROTHER</h1>
+        <h1>IS WATCH-</h1>
+        <h1>ING YOU</h1>
+      </div>
+    </div>
+    <div class="menu">
+      <img src="img/logo.png" class="logo">
+      <div class="pageNames">
+        <a href="index.html"><h2>HOME</h2></a>
+        <a href="laws.html"><h2>GLOBAL SURVEILLANCE LAW COMPARISON</h2></a>
+        <a href="event.html"><h2>EVENTS INVOLVING PERSONAL INFO</h2></a>
+        <a href="tools.html"><h2>TOOLS</h2></a>
+      </div>
+    </div>
+    <div class="intro">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit purus, imperdiet a lobortis quis, commodo non risus. Ut fermentum pulvinar ligula vitae pharetra. Vivamus eget elit enim. Nunc tincidunt ante a mauris tristique, nec accumsan
+      tortor suscipit. Aenean turpis velit, pulvinar id nunc sit amet, fringilla suscipit tellus. Maecenas leo nunc, luctus et viverra at, sollicitudin ut ligula. Nulla iaculis dui sed tempor ultrices. Sed bibendum aliquet lorem sit amet porttitor.
+      Proin vulputate felis et est porta euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nisl neque. Nullam in rutrum
+      purus.
+    </div>
+  </div>
+
+  <script src="eyeScript.js" charset="utf-8"></script>
+
+</body>
+
 </html>

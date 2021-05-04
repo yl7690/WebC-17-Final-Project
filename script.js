@@ -5,6 +5,45 @@ var menuHide = true;
 var menuShow = false;
 var checkbox, displayEye, lawData;
 var showEye, hideEye;
+let toolsElement = document.getElementById("content");
+let myJSON = [
+  {
+    "name": "Tor Browser",
+    "img": "img/tools/tor.png",
+    "intro": "Tor is free and open-source software for enabling anonymous communication by directing Internet traffic through a free, worldwide, volunteer overlay network consisting of more than seven thousand relays in order to conceal the location and usage of a user from anyone conducting network surveillance or traffic analysis.",
+    "link": "https://www.torproject.org/download/"
+  },
+  {
+    "name": "ProtonMail",
+    "img": "img/tools/proton.png",
+    "intro": "ProtonMail is an end-to-end encrypted email service founded in 2013 in Geneva, Switzerland by scientists who spent time at the CERN research facility. It is the world's largest secure email service.",
+    "link": "https://protonmail.com/"
+  },
+  {
+    "name": "DuckDuckGo",
+    "img": "img/tools/duckduckgo.png",
+    "intro": "DuckDuckGo is an internet search engine that emphasizes protecting searchers' privacy and avoiding the filter bubble of personalized search results. DuckDuckGo distinguishes itself from other search engines by not profiling its users and by showing all users the same search results for a given search term.",
+    "link": "https://duckduckgo.com/"
+  },
+  {
+    "name": "HTTPS Everywhere",
+    "img": "img/tools/HTTPS.jpg",
+    "intro": "HTTPS Everywhere is a free and open-source browser extension for Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, Brave, Vivaldi and Firefox for Android, which is developed collaboratively by The Tor Project and the Electronic Frontier Foundation.",
+    "link": "https://www.eff.org/https-everywhere"
+  },
+  {
+    "name": "Hushmail",
+    "img": "img/tools/hushmail.jpg",
+    "intro": "Hushmail offers encrypted, private email specifically for enterprise use for the healthcare and legal sectors. It began providing secure web mail solutions in 1999, so it’s an established player in the field. For emails sent to other Hushmail users, they will be encrypted by default. Non-users can view emails on a secure webpage.",
+    "link": "https://www.hushmail.com/"
+  },
+  {
+    "name": "Silent Circle",
+    "img": "img/tools/silent.jpg",
+    "intro": "Silent Circle is an encrypted communications firm based in Washington DC. Silent Circle provides multi-platform secure communication services for mobile devices and desktop.",
+    "link": "https://www.silentcircle.com/"
+  }
+];
 
 
 // window.addEventListener('DOMContentLoaded', (event) => {
@@ -94,7 +133,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   lawData = document.getElementsByClassName('data');
 
-  for (i=0; i<9; i++) {
+  for (let i=0; i<9; i++) {
     checkboxes[i].setAttribute('showEye', false);
     checkboxes[i].setAttribute('hideEye', true);
     lawData[i].classList.add('hideData');
@@ -144,6 +183,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
+for (let i = 0; i < myJSON.length; i++) {
+  createSection(myJSON[i]);
+}
+
 function showCompare(x) {
 
       if (checkboxes[x].hideEye) {
@@ -155,12 +198,12 @@ function showCompare(x) {
       }
 
       if (checkboxes[x].showEye) {
-        displayEye[x].src = "blueOpenEye.png";
+        displayEye[x].src = "img/blueOpenEye.png";
         lawData[x].classList.add('showData');
         // hideEye = true;
         // showEye = false;
       } else if (checkboxes[x].hideEye) {
-          displayEye[x].src = "blueClosedEye.png";
+          displayEye[x].src = "img/blueClosedEye.png";
           lawData[x].classList.remove('showData');
           // hideEye = false;
           // showEye = true;
@@ -180,4 +223,34 @@ function showMenu() {
       menuHide = true;
       menuShow = false;
     }
+}
+
+function createSection(incomingJSON) {
+  let newTool = document.createElement("DIV");
+  newTool.style.backgroundColor = incomingJSON['bgColor'];
+  newTool.style.backgroundImage = incomingJSON['imgUrl'];
+  newTool.classList.add('toolContainer');
+
+  let newName = document.createElement("H3");
+  newName.innerText = incomingJSON['name'];
+  newName.classList.add('name');
+  newTool.appendChild(newName);
+
+  let newImg = document.createElement("IMG");
+  newImg.src = incomingJSON['img'];
+  newImg.classList.add('toolImg');
+  newTool.appendChild(newImg);
+
+  let newIntro = document.createElement("P");
+  newIntro.innerText = incomingJSON['intro'];
+  newIntro.classList.add('toolIntro');
+  newTool.appendChild(newIntro);
+
+  let newLink = document.createElement('a');
+  newLink.text = "Find more about it.";
+  newLink.href = incomingJSON['link'];
+  newLink.classList.add('links');
+  newTool.appendChild(newLink);
+
+  toolsElement.appendChild(newTool);
 }
